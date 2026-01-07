@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>INSCRIÇÃO PICS</title>
     <style>
-        /* Animação Neon nas Bordas */
         @keyframes glow {
             0% { border-color: #58a6ff; box-shadow: 0 0 10px #58a6ff; }
             50% { border-color: #00ff00; box-shadow: 0 0 25px #00ff00; }
@@ -35,17 +34,17 @@
             animation: glow 4s infinite ease-in-out;
         }
 
-        /* LADO DA FOTO - AGORA SEM PASTA */
+        /* LADO DA FOTO - AJUSTE BLINDADO */
         .foto-lateral {
             width: 45%;
-            /* APONTANDO DIRETO PARA O ARQUIVO NA RAIZ */
-            background-image: url('FOTO.PNG'); 
+            /* Tente trocar FOTO.PNG por foto.png se não der certo */
+            background-image: url('./FOTO.PNG'); 
             background-size: cover;
-            background-position: center top;
+            background-position: center;
             background-repeat: no-repeat;
             border-right: 2px solid #00ff00;
             min-height: 500px;
-            background-color: #1a1a1a;
+            background-color: #1a1a1a; /* Cor de fundo se a imagem sumir */
         }
 
         .form-lateral {
@@ -57,29 +56,10 @@
             justify-content: center;
         }
 
-        h1 { 
-            color: #00ff00; 
-            font-size: 35px; 
-            margin: 0; 
-            text-transform: uppercase; 
-            text-shadow: 0 0 10px #00ff00; 
-        }
+        h1 { color: #00ff00; font-size: 35px; margin: 0; text-transform: uppercase; text-shadow: 0 0 10px #00ff00; }
+        h3 { color: #58a6ff; font-size: 16px; margin: 5px 0 30px 0; font-family: sans-serif; }
 
-        h3 { 
-            color: #58a6ff; 
-            font-size: 16px; 
-            margin: 5px 0 30px 0; 
-            font-family: sans-serif; 
-        }
-
-        label { 
-            display: block; 
-            margin-top: 15px; 
-            color: #ccc; 
-            font-size: 13px; 
-            text-transform: uppercase; 
-            font-family: sans-serif; 
-        }
+        label { display: block; margin-top: 15px; color: #ccc; font-size: 13px; text-transform: uppercase; font-family: sans-serif; }
         
         input[type="text"], select {
             width: 100%;
@@ -90,23 +70,6 @@
             color: #00ff00;
             border-radius: 6px;
             box-sizing: border-box;
-            transition: 0.3s;
-        }
-
-        input[type="text"]:focus, select:focus {
-            outline: none;
-            border-color: #00ff00;
-            box-shadow: 0 0 15px #00ff00;
-        }
-
-        .cpt-row {
-            display: flex;
-            align-items: center;
-            margin-top: 25px;
-            gap: 12px;
-            background: rgba(255,255,255,0.05);
-            padding: 12px;
-            border-radius: 8px;
         }
 
         button {
@@ -132,13 +95,7 @@
             transform: translateY(-3px);
         }
 
-        .footer { 
-            margin-top: 30px; 
-            font-size: 11px; 
-            color: #555; 
-            text-align: center; 
-            font-family: sans-serif; 
-        }
+        .footer { margin-top: 30px; font-size: 11px; color: #555; text-align: center; }
 
         @media (max-width: 768px) {
             .main-container { flex-direction: column; }
@@ -157,7 +114,6 @@
         <h3>BAN COACH LIPEE & GUSTA</h3>
 
         <form action="https://script.google.com/macros/s/AKfycbw0W8RgEWtBPwdqkRkOugJso-usl8dRs5hZU0FRisLX0buMJewgRLd8Ju2EcteQsxwk/exec" method="POST">
-            
             <label>NOME DO JOGADOR / NICK</label>
             <input type="text" name="nome" placeholder="EX: PICS_GUSTA" required>
 
@@ -168,14 +124,13 @@
                 <option value="Suporte">SUPORTE 🛡️</option>
             </select>
 
-            <div class="cpt-row">
-                <input type="checkbox" name="cpt" value="Sim" style="width:24px; height:24px; cursor:pointer;">
-                <label style="margin:0; cursor:pointer; font-weight: bold;">CAPITÃO (CPT)</label>
+            <div style="display:flex; align-items:center; margin-top:20px; gap:10px;">
+                <input type="checkbox" name="cpt" value="Sim" style="width:20px; height:20px;">
+                <label style="margin:0;">CAPITÃO (CPT)</label>
             </div>
 
             <button type="submit">CONFIRMAR INSCRIÇÃO</button>
         </form>
-
         <div class="footer">POWERED BY CPN AXE v2.0</div>
     </div>
 </div>
