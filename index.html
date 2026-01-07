@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>INSCRIÇÃO PICS</title>
     <style>
-        /* Animação Neon nas Bordas do Card Principal */
+        /* Animação Neon nas Bordas */
         @keyframes glow {
             0% { border-color: #58a6ff; box-shadow: 0 0 10px #58a6ff; }
             50% { border-color: #00ff00; box-shadow: 0 0 25px #00ff00; }
@@ -15,7 +15,7 @@
         body {
             background-color: #050505;
             color: white;
-            font-family: 'Impact', 'Arial Black', sans-serif;
+            font-family: 'Impact', sans-serif;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -35,17 +35,19 @@
             animation: glow 4s infinite ease-in-out;
         }
 
-        /* Lado da Foto (Pasta foto/foto.png) */
+        /* LADO DA FOTO - AJUSTADO PARA MAIÚSCULO */
         .foto-lateral {
             width: 45%;
-            background-image: url('foto/foto.png'); 
+            /* Aqui está a correção para o seu arquivo FOTO.PNG */
+            background-image: url('foto/FOTO.PNG'); 
             background-size: cover;
             background-position: center;
+            background-repeat: no-repeat;
             border-right: 2px solid #00ff00;
             min-height: 500px;
+            background-color: #1a1a1a;
         }
 
-        /* Lado do Formulário */
         .form-lateral {
             padding: 40px;
             width: 55%;
@@ -55,34 +57,11 @@
             justify-content: center;
         }
 
-        h1 { 
-            color: #00ff00; 
-            font-size: 35px; 
-            margin: 0; 
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            text-shadow: 0 0 10px #00ff00;
-        }
+        h1 { color: #00ff00; font-size: 35px; margin: 0; text-transform: uppercase; text-shadow: 0 0 10px #00ff00; }
+        h3 { color: #58a6ff; font-size: 16px; margin: 5px 0 30px 0; font-family: sans-serif; }
 
-        h3 { 
-            color: #58a6ff; 
-            font-size: 16px; 
-            margin: 5px 0 30px 0;
-            letter-spacing: 1px;
-            font-family: sans-serif;
-            font-weight: bold;
-        }
-
-        label { 
-            display: block; 
-            margin-top: 15px; 
-            color: #ccc; 
-            font-size: 13px; 
-            text-transform: uppercase;
-            font-family: sans-serif;
-        }
+        label { display: block; margin-top: 15px; color: #ccc; font-size: 13px; text-transform: uppercase; font-family: sans-serif; }
         
-        /* Neon nos Inputs ao focar */
         input[type="text"], select {
             width: 100%;
             padding: 14px;
@@ -111,7 +90,6 @@
             border-radius: 8px;
         }
 
-        /* BOTÃO COM EFEITO NEON AO PASSAR O MOUSE */
         button {
             width: 100%;
             padding: 20px;
@@ -126,30 +104,20 @@
             text-transform: uppercase;
             border-radius: 8px;
             transition: 0.4s;
-            position: relative;
         }
 
         button:hover {
             background: #00ff00;
             color: white;
-            /* Brilho Neon intenso no hover */
-            box-shadow: 0 0 20px #00ff00, 0 0 40px #00ff00, 0 0 60px #00ff00;
-            text-shadow: 0 0 5px white;
+            box-shadow: 0 0 20px #00ff00, 0 0 40px #00ff00;
             transform: translateY(-3px);
         }
 
-        .footer {
-            margin-top: 30px;
-            font-size: 11px;
-            color: #555;
-            text-align: center;
-            font-family: sans-serif;
-        }
+        .footer { margin-top: 30px; font-size: 11px; color: #555; text-align: center; font-family: sans-serif; }
 
-        /* Ajuste Mobile */
         @media (max-width: 768px) {
             .main-container { flex-direction: column; }
-            .foto-lateral { width: 100%; min-height: 250px; border-right: none; border-bottom: 3px solid #00ff00; }
+            .foto-lateral { width: 100%; min-height: 300px; border-right: none; border-bottom: 3px solid #00ff00; }
             .form-lateral { width: 100%; padding: 30px; }
         }
     </style>
