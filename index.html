@@ -35,13 +35,13 @@
             animation: glow 4s infinite ease-in-out;
         }
 
-        /* LADO DA FOTO - AJUSTADO PARA MAIÚSCULO */
+        /* LADO DA FOTO - AGORA SEM PASTA */
         .foto-lateral {
             width: 45%;
-            /* Aqui está a correção para o seu arquivo FOTO.PNG */
-            background-image: url('foto/FOTO.PNG'); 
+            /* APONTANDO DIRETO PARA O ARQUIVO NA RAIZ */
+            background-image: url('FOTO.PNG'); 
             background-size: cover;
-            background-position: center;
+            background-position: center top;
             background-repeat: no-repeat;
             border-right: 2px solid #00ff00;
             min-height: 500px;
@@ -57,10 +57,29 @@
             justify-content: center;
         }
 
-        h1 { color: #00ff00; font-size: 35px; margin: 0; text-transform: uppercase; text-shadow: 0 0 10px #00ff00; }
-        h3 { color: #58a6ff; font-size: 16px; margin: 5px 0 30px 0; font-family: sans-serif; }
+        h1 { 
+            color: #00ff00; 
+            font-size: 35px; 
+            margin: 0; 
+            text-transform: uppercase; 
+            text-shadow: 0 0 10px #00ff00; 
+        }
 
-        label { display: block; margin-top: 15px; color: #ccc; font-size: 13px; text-transform: uppercase; font-family: sans-serif; }
+        h3 { 
+            color: #58a6ff; 
+            font-size: 16px; 
+            margin: 5px 0 30px 0; 
+            font-family: sans-serif; 
+        }
+
+        label { 
+            display: block; 
+            margin-top: 15px; 
+            color: #ccc; 
+            font-size: 13px; 
+            text-transform: uppercase; 
+            font-family: sans-serif; 
+        }
         
         input[type="text"], select {
             width: 100%;
@@ -113,7 +132,13 @@
             transform: translateY(-3px);
         }
 
-        .footer { margin-top: 30px; font-size: 11px; color: #555; text-align: center; font-family: sans-serif; }
+        .footer { 
+            margin-top: 30px; 
+            font-size: 11px; 
+            color: #555; 
+            text-align: center; 
+            font-family: sans-serif; 
+        }
 
         @media (max-width: 768px) {
             .main-container { flex-direction: column; }
